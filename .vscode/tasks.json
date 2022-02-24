@@ -1,0 +1,38 @@
+{
+    "tasks": [
+        {
+          "type": "shell",
+          "label": "create build directory",
+          "command": "mkdir -p ./target",
+        },
+        {
+          "type": "shell",
+          "label": "clang++ build active file",
+          "command": "/usr/bin/clang++",
+          "args": [
+            "-std=c++20",
+            "-stdlib=libc++",
+            "-g",
+            "./src/**.c++",
+            "-o",
+            "./target/${fileBasenameNoExtension}"
+          ],
+          "options": {
+            "cwd": "${workspaceFolder}"
+          },
+          "problemMatcher": ["$gcc"],
+          "group": {
+            "kind": "build",
+            "isDefault": true
+          }
+        },
+        {
+          "label": "Build",
+          "dependsOn": [
+              "create build directory",
+              "clang++ build active file"
+          ]
+        },
+      ],
+    "version": "2.0.0"
+}
