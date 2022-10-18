@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     cout << endl
-         << "Puzzle https://adventofcode.com/2021/day/10 ©ulf@famkarlsson.org" << endl
+         << "Puzzle https://adventofcode.com/2021/day/10 ©https://github.com/ulfdawolf" << endl
          << endl;
 
     // Example input
