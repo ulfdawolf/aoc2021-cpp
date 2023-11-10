@@ -119,7 +119,7 @@ ParseLineResult Parser::parseLine(string line)
     char stack[MAX_STACK_LENGTH];
     int stackIndex = 0;
 
-    for (int i = 0; i < line.length(); i++)
+    for (size_t i = 0; i < line.length(); i++)
     {
         char current = line.at(i);
         if (isEndSymbol(current))
